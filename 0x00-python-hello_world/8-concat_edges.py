@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-str1 = "object-oriented"
-str2 = " programming with"
-str3 = " Python"
-print(str1.capitalize() + str2 + str3 + "\n")
+str = "Python is an interpreted, interactive, object-oriented programming\
+ language that combines remarkable power with very clear syntax"
+print(str.split(" ")[5][:-1] + " " + str.split(" ")[6] + " " + str.split(" ")[-2] + " " + str.split(" ")[-1] + "\n")
