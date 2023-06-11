@@ -7,38 +7,42 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *fast = *head;
-	listint_t *slow = *head;
-	listint_t *prev = NULL;
-	listint_t *next;
+	int n, i, a, li;
+	int *name;
+	listint_t *current;
+	listint_t  *new;
 
-	/* Find the middle of the list using Floyd's cycle-finding algorithm */
-	while (fast != NULL && fast->next != NULL)
+	current = *head;
+	if (*head == NULL)
 	{
-		fast = fast->next->next;
-		prev = slow;
-		slow = slow->next;
+		return (1);
 	}
-
-	/* Reverse the second half of the list */
-	while (slow != NULL)
+	n = 0;
+	while (current != NULL)
 	{
-		next = slow->next;
-		slow->next = prev;
-		prev = slow;
-		slow = next;
+		current = current->next;
+		n++;
 	}
-
-	/* Compare the first half of the list with the reversed second half */
-	slow = prev;
-	fast = *head;
-	while (slow != NULL)
+	name = malloc(sizeof(int) * n);
+	if (name == NULL)
 	{
-		if (slow->n != fast->n)
+		return (0);
+	}
+	new = *head;
+	for (i = 0; new != NULL && i < n; i++)
+	{
+		name[i] = new->n;
+		new = new->next;
+	}
+	for (a = 0; a < n/2; a++)
+	{
+		li = n - a - 1;
+		if (name[a] != name[li])
+		{
+			free(name);
 			return (0);
-		slow = slow->next;
-		fast = fast->next;
+		}
 	}
-
+	free(name);
 	return (1);
 }
