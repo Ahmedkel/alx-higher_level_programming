@@ -2,4 +2,4 @@
 def raise_exception():
     x = "string"
     y = 5
-    z = x + y # This line will raise a TypeError
+    z = x + y
