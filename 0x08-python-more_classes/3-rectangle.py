@@ -137,5 +137,4 @@ class Rectangle:
 
         rectangle = "#" * self.width + "\n"
         rec = rectangle * self.height
-        return rec[:-1] 
-        
+        return rec[:-1]
