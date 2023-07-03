@@ -11,12 +11,14 @@ class Rectangle:
     Attributes:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
+        print_symbol: The symbol used for string representation.
 
     Methods:
         No additional methods defined.
     """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -99,18 +101,15 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def area(self):
-
         """
         Calculate the area of the rectangle.
 
         Returns:
             int: The calculated area of the rectangle.
         """
-
         return self.width * self.height
 
     def perimeter(self):
-
         """
         Calculate the perimeter of the rectangle.
 
@@ -122,48 +121,39 @@ class Rectangle:
         return self.__width * 2 + self.__height * 2
 
     def __str__(self):
-
         """
         Returns a string representation of the rectangle.
 
         If either the width or height of the rectangle is zero, an
         empty string is returned.
-        Otherwise, the rectangle is represented as a string of "#" characters,
-        forming a rectangular shape.
 
         Returns:
             str: The string representation of the rectangle.
-
         """
-
         if self.width == 0 or self.height == 0:
             return ""
 
-        rectangle = "#" * self.width + "\n"
+        rectangle = str(self.print_symbol) * self.width + "\n"
         rec = rectangle * self.height
         return rec[:-1]
 
     def __repr__(self):
-
         """
         Returns a string representation of the rectangle for object recreation.
 
         Returns:
             str: The string representation of the rectangle.
         """
-
-        return f'Rectangle({self.width}, {self.height})'
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-
         """
-    Destructor method for the Rectangle class.
+        Destructor method for the Rectangle class.
 
-    Prints a message when an instance of the Rectangle class is deleted.
+        Prints a message when an instance of the Rectangle class is deleted.
 
-    Returns:
-        None
-    """
-
+        Returns:
+            None
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
