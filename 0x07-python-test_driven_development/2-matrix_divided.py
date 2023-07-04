@@ -9,11 +9,13 @@ def matrix_divided(matrix, div):
 
     Raises:
         TypeError: If the matrix is not a list of lists of integers/floats,
-            if each row of the matrix has a different size, or if div is not a number.
+            if each row of the matrix has a different size,
+            or if div is not a number.
         ZeroDivisionError: If div is zero.
 
     Returns:
-        A new matrix with each element divided by div, rounded to 2 decimal places.
+        A new matrix with each element divided by div,
+        rounded to 2 decimal places.
     """
 
     if not isinstance(div, (int, float)):
@@ -42,5 +44,5 @@ def matrix_divided(matrix, div):
                 raise TypeError(err_msg)
 
         matrix_row_length = len(row)
-    
+
     return [[round(i / div, 2) for i in row] for row in matrix]
