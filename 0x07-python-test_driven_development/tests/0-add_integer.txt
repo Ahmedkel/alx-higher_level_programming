@@ -24,7 +24,7 @@ Adding 100.3 and -2
 	98
 
 Adding an integer number and a string
-    >>> add_integer(4, "School")
+    >>> add_integer(4, "BestiSchool")
     Traceback (most recent call last):
 	...
     TypeError: b must be an integer
