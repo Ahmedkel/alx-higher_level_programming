@@ -10,17 +10,17 @@ Importing function from the module:
 
 Passing first_name and last_name correctly:
 
-    >>> say_my_name("Zino", "Chan")
-    My name is Zino Chan
+    >>> say_my_name("Mol", "Halawiyat")
+    My name is Mol Halawiyat
 
 Passing first_name only:
 
-    >>> say_my_name("Gintoki")
-    My name is Gintoki
+    >>> say_my_name("Solo")
+    My name is Solo
 
 Passing None as the last_name:
 
-    >>> say_my_name("Kagura", None)
+    >>> say_my_name("Leveling", None)
     Traceback (most recent call last):
               ...
     TypeError: last_name must be a string
@@ -41,7 +41,7 @@ Passing a number as the first_name:
 
 Passing a number as the last_name:
 
-    >>> say_my_name("Zino", 0)
+    >>> say_my_name("Mol", 0)
     Traceback (most recent call last):
               ...
     TypeError: last_name must be a string
@@ -55,13 +55,13 @@ Missing two arguments:
 
 Passing an empty string as the first_name:
 
-    >>> say_my_name("", "Sakata")
-    My name is  Sakata
+    >>> say_my_name("", "Mol")
+    My name is  Mol
 
 Passing an empty string as the last_name:
 
-    >>> say_my_name("Zino", "")
-    My name is Zino
+    >>> say_my_name("Mol", "")
+    My name is Mol
 
 Both arguments are empty strings:
 
