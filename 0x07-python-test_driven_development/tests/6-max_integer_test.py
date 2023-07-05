@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""6-max_integer_test.py"""
+
 
 import unittest
 from max_integer import max_integer
