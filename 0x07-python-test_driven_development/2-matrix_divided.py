@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""2-matrix_divided.py"""
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a divisor.
