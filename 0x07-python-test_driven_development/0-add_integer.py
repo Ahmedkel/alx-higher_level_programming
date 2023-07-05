@@ -8,12 +8,12 @@ def add_integer(a, b=98):
     """
     Add two integers together.
 
-    Parameters:
-    a (int or float): The first number. Must be an integer or float.
-    b (int or float): The second number. Must be an integer or float.
+    Parameters :
+    a (int or float) : The first number. Must be an integer / float.
+    b (int or float) : The second number. Must be an integer / float.
 
     Returns:
-    int: The sum of a and b, as an int.
+    integer : The sum of a and b, as an int.
     """
     if isinstance(a, (int, float)):
         if a != a or abs(a) == float('inf'):
