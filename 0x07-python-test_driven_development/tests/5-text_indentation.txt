@@ -42,8 +42,8 @@ Printing a large message
 
 Printing a word with spaces around
 
-    >>> text_indentation("    Gintama    ")
-    Gintama
+    >>> text_indentation("    Molhwiyat    ")
+    Molhlwiyat
 
 Printing a word with a special character at the end
 
