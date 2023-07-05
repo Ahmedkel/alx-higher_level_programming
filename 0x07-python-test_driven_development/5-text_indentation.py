@@ -2,27 +2,24 @@
 def text_indentation(text):
     """
     prints a text with 2 new lines after each of these
-    characters: ., ? and :
+    special characters : ., ? and :
 
     Args:
-                text (str): The text string to be parsed.
+                text (str): The text string.
 
     Raises:
-                TypeError: If text is not a string.
+                TypeError: If is not a string.
     """
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    separators = ['.', '?', ':']
-    result = ''
-    i = 0
+    s = text[:]
 
-    while i < len(text):
-        result += text[i]
-        if text[i] in separators and i < len(text) - 1 and text[i + 1] == ' ':
-            result += '\n\n'
-            i += 2
-        else:
-            i += 1
+    for delimeter in ".?:":
+        l_text = s.split(delimeter)
+        s = ""
+        for i in l_text:
+            i = i.strip(" ")
+            s = i + delimeter if s is "" else s + "\n\n" + i + delimeter
 
-    print(result.strip())
+    print(s[:-3], end="")
