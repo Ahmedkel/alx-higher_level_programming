@@ -81,7 +81,7 @@ Dividing a matrix which its rows don't have the same size 2:
 
 Dividing a matrix which its elements aren't integer/float numbers:
 
-    >>> matrix_divided([["Hello", "World"], ["Hello", "Holberton"]], 10)
+    >>> matrix_divided([["Hello", "World"], ["Hello", "Alx"]], 10)
     Traceback (most recent call last):
      	       ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
