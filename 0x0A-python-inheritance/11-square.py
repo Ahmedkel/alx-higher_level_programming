@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """this module defines a Rectangle subclass Square"""
 
 
