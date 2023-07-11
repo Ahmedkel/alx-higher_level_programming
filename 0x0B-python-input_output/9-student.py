@@ -11,5 +11,5 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """ Method that returns directory description """
+        """ Method that returns directory description. """
         return self.__dict__.copy()
