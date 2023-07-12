@@ -1,4 +1,5 @@
-#### In a nutshellâ€¦
+#0x0B. Python - Input/Output
+#### In a nutshell..
 
 -   **Auto QA review:** 140.0/140 mandatory & 0.0/21 optional
 -   **Altogether:** Â **100.0%**
