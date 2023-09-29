@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-import urllib.request
-import urllib.parse
-import sys
 """
 Sends a POST request to the specified
 URL with the email as a parameter,
 and displays the body of the response.
 """
+import urllib.request
+import urllib.parse
+import sys
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
