@@ -2,14 +2,14 @@
 const request = require('request');
 
 const apiUrl = process.argv[2];
-const characterId = 18;
+const characterId = '18';
 
 request(apiUrl, (error, response, body) => {
   if (error) {
     console.log(error);
     return;
   }
-  
+
   if (response && response.statusCode !== 200) {
     console.error('status code:', response.statusCode);
     return;
