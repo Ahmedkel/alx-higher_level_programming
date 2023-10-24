@@ -9,7 +9,11 @@ request(apiUrl, (error, response, body) => {
     console.log(error);
     return;
   }
-
+  
+  if (response && response.statusCode !== 200) {
+    console.error('status code:', response.statusCode);
+    return;
+  }
   const films = JSON.parse(body).results;
   const count = films.filter((film) => film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)).length;
 
