@@ -10,10 +10,18 @@ request(apiUrl, (error, response, body) => {
     return;
   }
 
-  if (response && response.statusCode !== 200) {
-    console.error('status code:', response.statusCode);
-    return;
-  }
+  if (response && response.statusCode === 200) {
+    const filmsData = JSON.parse(body).results;
+    let wedgeAntillesFilms = 0;
+
+    filmsData.forEach(film => {
+      if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
+        wedgeAntillesFilms++;
+      }
+    });
+
+    console.log(wedgeAntillesFilms);
+
   const films = JSON.parse(body).results;
   const count = films.filter((film) => film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)).length;
 
